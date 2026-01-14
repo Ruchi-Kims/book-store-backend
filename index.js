@@ -16,8 +16,11 @@ app.use(cors({
 
 
 //dirige toutes les requêtes qui commencent par /api/books vers le fichier book.route.js
-const bookRoutes = require("./src/books/book.route")
+const bookRoutes = require("./src/books/book.route");
+const orderRoutes = require("./src/orders/order.route")
 app.use("/api/books" , bookRoutes)
+app.use("/api/orders" , orderRoutes)
+
 
 
 async function main() {
